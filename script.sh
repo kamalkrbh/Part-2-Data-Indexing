@@ -10,5 +10,8 @@ sudo sonic-cli configure mclag domain-id 1
 sudo sonic-cli configure mclag peer-ip 10.10.131.111
 sudo sonic-cli configure mclag peer-link 1
 
+# Verify local certificates
+sudo openssl verify -CAfile /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/localhost.crt
+
 # Run the commands on 10.10.131.111
 ssh 10.10.131.111 'bash -s' < ./script.sh
