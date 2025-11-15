@@ -5,9 +5,13 @@ sudo sonic-cli configure mclag add 1
 sudo sonic-cli configure mclag domain-id 1
 sudo sonic-cli configure mclag peer-ip 10.10.10.2
 sudo sonic-cli configure mclag peer-link 1
+sudo sonic-cli configure mclag system-mac 00:11:22:33:44:55
+sudo sonic-cli configure mclag system-priority 100
 
 # Create an MCLAG on device 2
 ssh 10.10.10.2 'sudo sonic-cli configure mclag add 1'
 ssh 10.10.10.2 'sudo sonic-cli configure mclag domain-id 1'
 ssh 10.10.10.2 'sudo sonic-cli configure mclag peer-ip 10.10.10.1'
 ssh 10.10.10.2 'sudo sonic-cli configure mclag peer-link 1'
+ssh 10.10.10.2 'sudo sonic-cli configure mclag system-mac 00:11:22:33:44:55'
+ssh 10.10.10.2 'sudo sonic-cli configure mclag system-priority 100'
